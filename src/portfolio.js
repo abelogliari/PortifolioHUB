@@ -23,9 +23,11 @@ const greeting = {
   username: "Abel Ogliari",
   title: "Olá, eu sou o Abel 👋",
   subTitle: emoji(
-    "Estudante na CEUB e entusiasta de tecnologia 🚀 desenvolvendo meu portfólio profissional com Git/GitHub, Python e desenvolvimento web. Em busca de oportunidades de estágio e de evoluir como desenvolvedor."
+    "Secretário Executivo Bilíngue atuando com dados em economia da saúde e estudante na CEUB. 🚀 Desenvolvo soluções em Python, automações e web, com foco em dados, eficiência e experiência do usuário. Em busca de evoluir como desenvolvedor."
   ),
-  resumeLink: "", // Coloque o link do seu currículo (PDF) aqui; deixe vazio para esconder o botão
+  // Link do currículo (PDF). Coloque o PDF em src/containers/greeting/resume.pdf
+  // (ou aponte para um PDF hospedado). Botão aparece quando este campo não está vazio.
+  resumeLink: "/resume.pdf",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -33,8 +35,8 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/abelogliari",
-  linkedin: "https://www.linkedin.com/in/SEU-USUARIO/", // <-- troque pelo seu LinkedIn
-  gmail: "seu-email@exemplo.com", // <-- troque pelo seu e-mail
+  linkedin: "https://www.linkedin.com/in/abelogliari/",
+  gmail: "abelogliari@gmail.com",
   // gitlab: "",
   // facebook: "",
   // medium: "",
@@ -49,16 +51,16 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "O que eu faço",
   subTitle:
-    "ESTUDANTE DEDICADO, APRENDENDO E CONSTRUINDO PROJETOS REAIS DE TECNOLOGIA",
+    "DESENVOLVO SOLUÇÕES COM FOCO EM DADOS, AUTOMAÇÃO E EXPERIÊNCIA DO USUÁRIO",
   skills: [
     emoji(
-      "⚡ Desenvolvimento e versionamento de projetos com Git e GitHub (GitHub Pages, branches, pull requests)"
+      "⚡ Desenvolvimento de aplicações e automações em Python (ex.: o Extrator CATMAT, que consome a API do Compras.gov.br)"
     ),
     emoji(
-      "⚡ Automação e scripts em Python (ex.: o projeto Extrator CATMAT)"
+      "⚡ Tratamento, integração e análise de dados para economia da saúde, com APIs, PostgreSQL e Excel/Sheets"
     ),
     emoji(
-      "⚡ Construção de páginas web com HTML, CSS e JavaScript, além de modelagem com AstahUML e dados em Excel/Sheets"
+      "⚡ Construção de páginas web com HTML5, CSS3 e JavaScript, versionando tudo com Git e GitHub (Pages, branches e pull requests)"
     )
   ],
 
@@ -91,7 +93,7 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "Banco de Dados / Dados",
+      skillName: "PostgreSQL / Bancos de Dados",
       fontAwesomeClassname: "fas fa-database"
     }
   ],
@@ -105,14 +107,25 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Centro Universitário de Brasília (CEUB)",
-      // logo: require("./assets/images/ceubLogo.png"), // opcional: adicione a logo em src/assets/images e descomente
-      subHeader: "Graduação — Ensino a Distância (EAD)", // <-- ajuste para o nome exato do seu curso
-      duration: "2026 — Atual", // <-- ajuste o período
+      subHeader: "Graduação — Ensino a Distância (EAD)",
+      duration: "2026 — Atual",
       desc: "Cursando o Bootcamp I, com foco em Git, GitHub, versionamento de código e construção de portfólio profissional por meio de projetos.",
       descBullets: [
-        "Desenvolvimento de portfólio digital hospedado em domínio próprio (abelogliari.com.br)",
-        "Aprendizado de fluxo profissional com Git: commits, branches e pull requests"
+        "Portfólio digital publicado em domínio próprio (abelogliari.com.br) via GitHub Pages",
+        "Fluxo profissional de Git: commits semânticos, branches e pull requests"
       ]
+    },
+    {
+      schoolName: "INEDI",
+      subHeader: "Curso Técnico em Secretariado",
+      duration: "2020 — 2021",
+      desc: "Formação técnica em secretariado executivo, gestão de processos administrativos e organização institucional."
+    },
+    {
+      schoolName: "Microlins",
+      subHeader: "Curso Técnico em Informática",
+      duration: "2014 — 2016",
+      desc: "Fundamentos de informática, lógica e ferramentas de produtividade."
     }
   ]
 };
@@ -131,6 +144,10 @@ const techStack = {
       progressPercentage: "75%"
     },
     {
+      Stack: "Dados (APIs / SQL / Sheets)",
+      progressPercentage: "70%"
+    },
+    {
       Stack: "Frontend (HTML / CSS / JS)",
       progressPercentage: "60%"
     }
@@ -144,29 +161,37 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Apoio Técnico — Economia da Saúde",
+      company: "CGES — Coordenação-Geral de Informações em Economia da Saúde",
+      companylogo: require("./assets/images/cgesLogo.png"),
+      date: "2023 — Atual",
+      desc: "Apoio técnico em projetos de pesquisa e gestão de dados em economia da saúde (SIOPS, PNGC, ApuraSUS e Banco de Preços em Saúde).",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Desenvolvimento de software em Python para extração, avaliação e compilação de dados públicos (API Compras.gov.br), subsidiando análises econômicas",
+        "Integração de sistemas e bancos de dados internos para monitoramento de preços e materiais de saúde (CATMAT e PDMs)",
+        "Atualização, revisão e controle de acessos a bases de dados estratégicas"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Apoio à Gestão de Processos e Dados",
+      company: "Ministério da Saúde — DATHI/SVSA e DEGERTS/SGTES",
+      companylogo: require("./assets/images/msLogo.png"),
+      date: "2022",
+      desc: "Coleta e organização de dados de processos institucionais, apoiando a sistematização de informações para gestão de eventos e viagens técnicas.",
+      descBullets: [
+        "Relatórios de gestão de processos diários utilizando metodologia Kanban para administração de prazos"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Apoio Técnico Legislativo",
+      company: "Assessoria Parlamentar — Ministério da Saúde",
+      companylogo: require("./assets/images/asparlLogo.png"),
+      date: "2021",
+      desc: "Organização e análise documental (PLs, PLCs, decretos) com foco em impactos na política pública de saúde.",
+      descBullets: [
+        "Apoio técnico à produção de relatórios estratégicos e acompanhamento de projetos legislativos",
+        "Atuação em respostas oficiais à CPI da COVID-19, com precisão e agilidade na tramitação de informações"
+      ]
     }
   ]
 };
@@ -182,29 +207,34 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projetos",
+  subtitle: "APLICAÇÕES E SOLUÇÕES QUE DESENVOLVI",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/catmatCover.png"),
+      projectName: "Extrator CATMAT — Dados Abertos",
+      projectDesc:
+        "Aplicação em Python para extração de códigos do Catálogo de Materiais via API do portal Dados Abertos (Compras.gov.br). Em fase experimental, com atualizações incrementais constantes.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "Ver repositório",
+          url: "https://github.com/abelogliari-code/Extrator-BPS-DA"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/siteCover.png"),
+      projectName: "PortifolioHUB — Portfólio Profissional",
+      projectDesc:
+        "Portfólio profissional em ReactJS, responsivo e otimizado para SEO, publicado em domínio próprio via GitHub Pages. Evoluiu de um site estático em HTML/CSS/JS para a stack atual.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "Ver site",
+          url: "https://abelogliari.com.br"
+        },
+        {
+          name: "Ver repositório",
+          url: "https://github.com/abelogliari/PortifolioHUB"
         }
       ]
     }
@@ -216,58 +246,54 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Certificações e Recomendações 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Cursos, certificações e reconhecimentos profissionais que reúni ao longo da minha trajetória",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Carta de Recomendação Profissional",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Recomendação profissional emitida com base na minha atuação em projetos de economia da saúde.",
+      image: require("./assets/images/cartaRecom.png"),
+      imageAlt: "Carta de Recomendação Profissional",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: "Ver documento",
+          url: "https://github.com/abelogliari/PortifolioHUB"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "ENAP — Escola Nacional de Administração Pública",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
+        "Introdução à Ciência de Dados e Sistema Eletrônico de Informações (SEI! USAR).",
+      image: require("./assets/images/certEnap.png"),
+      imageAlt: "ENAP",
+      footerLink: [{name: "ENAP", url: "https://www.enap.gov.br/"}]
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
+      title: "AVASUS — SIOPS",
+      subtitle:
+        "Sistema de Informações sobre Orçamentos Públicos em Saúde (SIOPS), pelo AVASUS.",
+      image: require("./assets/images/certAvasus.png"),
+      imageAlt: "AVASUS SIOPS",
+      footerLink: [{name: "AVASUS", url: "https://avasus.ufrn.br/"}]
+    },
+    {
+      title: "Udemy — Programação",
+      subtitle:
+        "Python (básico ao avançado), Django, JavaScript, Bancos de Dados, Git e GitHub, Android e Algoritmos.",
+      image: require("./assets/images/certUdemy.png"),
+      imageAlt: "Udemy",
+      footerLink: [{name: "Udemy", url: "https://www.udemy.com/"}]
+    },
+    {
+      title: "Cursos Técnicos",
+      subtitle:
+        "Técnico em Informática (Microlins, 2014–2016) e Técnico em Secretariado (INEDI, 2020–2021).",
+      image: require("./assets/images/certTecnico.png"),
+      imageAlt: "Cursos Técnicos"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -280,40 +306,18 @@ const blogSection = {
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
   displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  blogs: [],
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
 
 const talkSection = {
   title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
+  subtitle: emoji("EVENTOS E PALESTRAS"),
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  talks: [],
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -323,10 +327,8 @@ const podcastSection = {
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: true // Set false to hide this section, defaults to true
+  podcast: [],
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -343,7 +345,7 @@ const contactInfo = {
   subtitle:
     "Quer conversar sobre um projeto ou apenas dizer um oi? Pode me chamar.",
   number: "", // <-- opcional: seu telefone
-  email_address: "seu-email@exemplo.com" // <-- troque pelo seu e-mail
+  email_address: "abelogliari@gmail.com"
 };
 
 // Twitter Section
