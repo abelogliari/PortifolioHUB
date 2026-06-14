@@ -293,7 +293,13 @@ const achievementSection = {
       subtitle:
         "Técnico em Informática (Microlins, 2014–2016) e Técnico em Secretariado (INEDI, 2020–2021).",
       image: require("./assets/images/certTecnico.png"),
-      imageAlt: "Cursos Técnicos"
+      imageAlt: "Cursos Técnicos",
+      footerLink: [
+        {
+          name: "Ver no LinkedIn",
+          url: "https://www.linkedin.com/in/abelogliari/"
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
