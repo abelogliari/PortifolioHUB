@@ -1,0 +1,33 @@
+# ===== Segredos e variáveis de ambiente =====
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+credentials.*
+
+# ===== Sistema operacional =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editores / IDEs =====
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== Node (caso adicione build/ferramentas) =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ===== Python (projetos auxiliares) =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== Logs e temporários =====
+*.log
+tmp/

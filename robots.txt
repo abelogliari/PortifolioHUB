@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Atualize a URL do seu site abaixo
-Sitemap: https://abelogliari-code.github.io/abelogliari/sitemap.txt
+Sitemap: https://abelogliari.com.br/sitemap.txt
