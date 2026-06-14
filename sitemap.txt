@@ -1,9 +1,0 @@
-https://abelogliari-code.github.io/abelogliari/
-https://abelogliari-code.github.io/abelogliari/sobre.html
-https://abelogliari-code.github.io/abelogliari/projetos.html
-https://abelogliari-code.github.io/abelogliari/contato.html
-https://abelogliari-code.github.io/abelogliari/apps/
-https://abelogliari-code.github.io/abelogliari/apps/todo/
-https://abelogliari-code.github.io/abelogliari/apps/conversor/
-https://abelogliari-code.github.io/abelogliari/apps/pomodoro/
-https://abelogliari-code.github.io/abelogliari/calculadora-web/
