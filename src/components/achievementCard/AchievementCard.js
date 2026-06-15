@@ -24,7 +24,10 @@ export default function AchievementCard({cardInfo, isDark}) {
         <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
           {cardInfo.title}
         </h5>
-        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+        <p
+          className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}
+          style={{whiteSpace: "pre-line"}}
+        >
           {cardInfo.description}
         </p>
       </div>

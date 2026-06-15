@@ -21,12 +21,11 @@ const illustration = {
 
 const greeting = {
   username: "Abel Ogliari",
-  title: "Olá, eu sou o Abel 👋",
+  title: "Olá, eu sou o Abel",
   subTitle: emoji(
-    "Secretário Executivo Bilíngue atuando com dados em economia da saúde e estudante na CEUB. 🚀 Desenvolvo soluções em Python, automações e web, com foco em dados, eficiência e experiência do usuário. Em busca de evoluir como desenvolvedor."
+    "Secretário Executivo Bilíngue e Analista de Desenvolvimento de Sistemas atuando com dados em economia da saúde e estudante no Centro Universitário de Brasília - CEUB. Desenvolvo soluções em Python, automações e sites web, com foco em dados, eficiência e experiência do usuário. Em busca de evoluir como desenvolvedor."
   ),
-  // Link do currículo (PDF). Coloque o PDF em src/containers/greeting/resume.pdf
-  // (ou aponte para um PDF hospedado). Botão aparece quando este campo não está vazio.
+  // Link do currículo (PDF). Arquivo em public/resume.pdf (servido em /resume.pdf).
   resumeLink: "/resume.pdf",
   displayGreeting: true // Set false to hide this section, defaults to true
 };
@@ -35,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/abelogliari",
-  linkedin: "https://www.linkedin.com/in/abelogliari/",
+  linkedin: "https://www.linkedin.com/in/abel-carlesso-ogliari/",
   gmail: "abelogliari@gmail.com",
   // gitlab: "",
   // facebook: "",
@@ -57,10 +56,10 @@ const skillsSection = {
       "⚡ Desenvolvimento de aplicações e automações em Python (ex.: o Extrator CATMAT, que consome a API do Compras.gov.br)"
     ),
     emoji(
-      "⚡ Tratamento, integração e análise de dados para economia da saúde, com APIs, PostgreSQL e Excel/Sheets"
+      "⚡ Tratamento, integração e análise de dados com APIs, SQL Developer, PostgreSQL e similares"
     ),
     emoji(
-      "⚡ Construção de páginas web com HTML5, CSS3 e JavaScript, versionando tudo com Git e GitHub (Pages, branches e pull requests)"
+      "⚡ Construção de páginas web e mobile interativas para a sua aplicação com HTML5, CSS3 e JavaScript"
     )
   ],
 
@@ -93,7 +92,19 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "PostgreSQL / Bancos de Dados",
+      skillName: "ReactJS",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "Node.js",
+      fontAwesomeClassname: "fab fa-node"
+    },
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "SQL - Bancos de Dados",
       fontAwesomeClassname: "fas fa-database"
     }
   ],
@@ -107,25 +118,15 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Centro Universitário de Brasília (CEUB)",
-      subHeader: "Graduação — Ensino a Distância (EAD)",
-      duration: "2026 — Atual",
-      desc: "Cursando o Bootcamp I, com foco em Git, GitHub, versionamento de código e construção de portfólio profissional por meio de projetos.",
-      descBullets: [
-        "Portfólio digital publicado em domínio próprio (abelogliari.com.br) via GitHub Pages",
-        "Fluxo profissional de Git: commits semânticos, branches e pull requests"
-      ]
+      subHeader: "Superior de Tecnologia em Análise e Desenvolvimento de Sistemas",
+      duration: "2025 — 2027",
+      desc: ""
     },
     {
-      schoolName: "INEDI",
-      subHeader: "Curso Técnico em Secretariado",
-      duration: "2020 — 2021",
-      desc: "Formação técnica em secretariado executivo, gestão de processos administrativos e organização institucional."
-    },
-    {
-      schoolName: "Microlins",
-      subHeader: "Curso Técnico em Informática",
-      duration: "2014 — 2016",
-      desc: "Fundamentos de informática, lógica e ferramentas de produtividade."
+      schoolName: "UniFatecie",
+      subHeader: "Superior de Tecnologia em Secretariado",
+      duration: "2024 — 2026",
+      desc: ""
     }
   ]
 };
@@ -140,16 +141,16 @@ const techStack = {
       progressPercentage: "70%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Git / Versionamento",
-      progressPercentage: "75%"
-    },
-    {
-      Stack: "Dados (APIs / SQL / Sheets)",
+      Stack: "Dados (APIs / SQL )",
       progressPercentage: "70%"
     },
     {
       Stack: "Frontend (HTML / CSS / JS)",
-      progressPercentage: "60%"
+      progressPercentage: "70%"
+    },
+    {
+      Stack: "Assessoria Executiva",
+      progressPercentage: "90%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -161,37 +162,28 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Apoio Técnico — Economia da Saúde",
-      company: "CGES — Coordenação-Geral de Informações em Economia da Saúde",
+      role: "Ministério da Saúde",
+      company: "Economia da Saúde",
       companylogo: require("./assets/images/cgesLogo.png"),
       date: "2023 — Atual",
-      desc: "Apoio técnico em projetos de pesquisa e gestão de dados em economia da saúde (SIOPS, PNGC, ApuraSUS e Banco de Preços em Saúde).",
+      desc: "Apoio técnico em pesquisa e gestão de dados em economia da saúde (SIOPS, ApuraSUS, Banco de Preços em Saúde).",
       descBullets: [
-        "Desenvolvimento de software em Python para extração, avaliação e compilação de dados públicos (API Compras.gov.br), subsidiando análises econômicas",
-        "Integração de sistemas e bancos de dados internos para monitoramento de preços e materiais de saúde (CATMAT e PDMs)",
-        "Atualização, revisão e controle de acessos a bases de dados estratégicas"
+        "Software em Python para extração de dados públicos (API Compras.gov.br)"
       ]
     },
     {
-      role: "Apoio à Gestão de Processos e Dados",
-      company: "Ministério da Saúde — DATHI/SVSA e DEGERTS/SGTES",
+      role: "Ministério da Saúde",
+      company: "Coordenação HIV/Aids",
       companylogo: require("./assets/images/msLogo.png"),
       date: "2022",
-      desc: "Coleta e organização de dados de processos institucionais, apoiando a sistematização de informações para gestão de eventos e viagens técnicas.",
-      descBullets: [
-        "Relatórios de gestão de processos diários utilizando metodologia Kanban para administração de prazos"
-      ]
+      desc: "Coleta e organização de dados de processos e apoio à gestão de eventos e viagens técnicas."
     },
     {
-      role: "Apoio Técnico Legislativo",
-      company: "Assessoria Parlamentar — Ministério da Saúde",
+      role: "Ministério da Saúde",
+      company: "Assessoria Parlamentar",
       companylogo: require("./assets/images/asparlLogo.png"),
       date: "2021",
-      desc: "Organização e análise documental (PLs, PLCs, decretos) com foco em impactos na política pública de saúde.",
-      descBullets: [
-        "Apoio técnico à produção de relatórios estratégicos e acompanhamento de projetos legislativos",
-        "Atuação em respostas oficiais à CPI da COVID-19, com precisão e agilidade na tramitação de informações"
-      ]
+      desc: "Análise documental (PLs, PLCs, decretos) e apoio a relatórios estratégicos em saúde."
     }
   ]
 };
@@ -208,33 +200,57 @@ const openSource = {
 
 const bigProjects = {
   title: "Projetos",
-  subtitle: "APLICAÇÕES E SOLUÇÕES QUE DESENVOLVI",
+  subtitle: "ALGUNS DOS PROJETOS QUE DESENVOLVI",
   projects: [
     {
-      image: require("./assets/images/catmatCover.png"),
-      projectName: "Extrator CATMAT — Dados Abertos",
+      image: require("./assets/images/franciscoCover.png"),
+      projectName: "Site Francisco Leal",
       projectDesc:
-        "Aplicação em Python para extração de códigos do Catálogo de Materiais via API do portal Dados Abertos (Compras.gov.br). Em fase experimental, com atualizações incrementais constantes.",
+        "Site institucional desenvolvido para o cliente Francisco Leal, com HTML, CSS e JavaScript.",
       footerLink: [
         {
           name: "Ver repositório",
-          url: "https://github.com/abelogliari-code/Extrator-BPS-DA"
+          url: "https://github.com/abelogliari/FranciscoLeal"
         }
       ]
     },
     {
       image: require("./assets/images/siteCover.png"),
-      projectName: "PortifolioHUB — Portfólio Profissional",
+      projectName: "PortifolioHUB",
       projectDesc:
-        "Portfólio profissional em ReactJS, responsivo e otimizado para SEO, publicado em domínio próprio via GitHub Pages. Evoluiu de um site estático em HTML/CSS/JS para a stack atual.",
+        "Meu portfólio profissional em ReactJS, responsivo e otimizado para SEO, publicado em domínio próprio via GitHub Pages.",
       footerLink: [
         {
           name: "Ver site",
           url: "https://abelogliari.com.br"
         },
         {
-          name: "Ver repositório",
+          name: "Repositório",
           url: "https://github.com/abelogliari/PortifolioHUB"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/catmatCover.png"),
+      projectName: "Extrator CATMAT",
+      projectDesc:
+        "Aplicação em Python que extrai códigos do Catálogo de Materiais via API do Compras.gov.br (Dados Abertos).",
+      footerLink: [
+        {
+          name: "Ver repositório",
+          url: "https://github.com/abelogliari/Extrator-CATMAT-DA"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/djudCover.png"),
+      projectName: "Painel DJUD",
+      projectDesc:
+        "Painel para acompanhamento e visualização de dados (DJUD).",
+      footerLink: [
+        {
+          name: "Ver repositório",
+          url: "https://github.com/abelogliari/djud-painel"
         }
       ]
     }
@@ -290,14 +306,13 @@ const achievementSection = {
     },
     {
       title: "Cursos Técnicos",
-      subtitle:
-        "Técnico em Informática (Microlins, 2014–2016) e Técnico em Secretariado (INEDI, 2020–2021).",
+      subtitle: "Informática\nSecretariado",
       image: require("./assets/images/certTecnico.png"),
       imageAlt: "Cursos Técnicos",
       footerLink: [
         {
           name: "Ver no LinkedIn",
-          url: "https://www.linkedin.com/in/abelogliari/"
+          url: "https://www.linkedin.com/in/abel-carlesso-ogliari/"
         }
       ]
     }
